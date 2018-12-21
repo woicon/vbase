@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>大厅</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="full-screen" content="yes">
+	<link rel="stylesheet" href="src/style/style.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="header-title">大厅</div>
+	</header>
+	
+	<div class="container">
+		<div class="tab line-b" id="tab">
+			<div class="active">最热</div>
+			<div>关注任务</div>
+			<div>分享任务</div>
+			<div>阅读任务</div>
+			<div>下载</div>
+			<div>高价</div>
+		</div>
+		
+		<div class="home-list">
+			<div class="home-list-item line-b">
+				<div class="home-list-cont">
+					<div class="home-list-cont-img">
+						<img src="https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__180.jpg" alt="" />
+					</div>
+					<div>
+						<h2>关注公众号任务</h2>
+						<div class="home-list-cont-line"><span>关注任务</span> <span>剩余22份</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="home-list-tag"><b>+90</b>金币</div>
+			</div>
+			
+			<div class="home-list-item line-b">
+				<div class="home-list-cont">
+					<div class="home-list-cont-img">
+						<img src="https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__180.jpg" alt="" />
+					</div>
+					<div>
+						<h2>关注公众号任务</h2>
+						<div class="home-list-cont-line"><span>关注任务</span> <span>剩余22份</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="home-list-tag"><b>+90</b>金币</div>
+			</div>
+
+
+			<div class="home-list-item line-b">
+				<div class="home-list-cont">
+					<div class="home-list-cont-img">
+						<img src="https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__180.jpg" alt="" />
+					</div>
+					<div>
+						<h2>关注公众号任务</h2>
+						<div class="home-list-cont-line"><span>关注任务</span> <span>剩余22份</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="home-list-tag"><b>+90</b>金币</div>
+			</div>
+
+
+			<div class="home-list-item line-b">
+				<div class="home-list-cont">
+					<div class="home-list-cont-img">
+						<img src="https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__180.jpg" alt="" />
+					</div>
+					<div>
+						<h2>关注公众号任务</h2>
+						<div class="home-list-cont-line"><span>关注任务</span> <span>剩余22份</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="home-list-tag"><b>+90</b>金币</div>
+			</div>
+			
+				<div class="home-list-item line-b">
+				<div class="home-list-cont">
+					<div class="home-list-cont-img">
+						<img src="https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__180.jpg" alt="" />
+					</div>
+					<div>
+						<h2>关注公众号任务</h2>
+						<div class="home-list-cont-line"><span>关注任务</span> <span>剩余22份</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="home-list-tag"><b>+90</b>金币</div>
+			</div>
+			
+				<div class="home-list-item line-b">
+				<div class="home-list-cont">
+					<div class="home-list-cont-img">
+						<img src="https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__180.jpg" alt="" />
+					</div>
+					<div>
+						<h2>关注公众号任务</h2>
+						<div class="home-list-cont-line"><span>关注任务</span> <span>剩余22份</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="home-list-tag"><b>+90</b>金币</div>
+			</div>
+
+
+		</div>
+	</div>
+	<footer>
+		<div class="active"><i class="news ico-barrage_fill"></i> 任务大厅</div>
+		<div><i class="news ico-createtask"></i>我的任务</div>
+		<div><i class="news ico-mine"></i> 个人中心</div>
+	</footer>
+	<script>
+		var tab = document.getElementById("tab")
+		var tabItem = tab.children
+		
+		tab.addEventListener('click', function(e){
+			console.log(e)
+			if(e.target.localName == 'div'){
+				console.log(this)
+				for(var i in tabItem){
+					console.log(tabItem[i].classList[0])
+					if(tabItem[i].classList[0] === "active"){
+						tabItem[i].classList.remove("active");
+					}
+					
+				}
+				e.target.classList.add("active");
+			}
+		})
+	</script>
+</body>
+</html>

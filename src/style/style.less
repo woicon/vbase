@@ -1,0 +1,159 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+@t3:#333;
+@t6:#666;
+@t9:#999;
+@t7:#777;
+@tc:#ccc;
+@te:#eee;
+@green:#FE7326;
+@import 'icon.less';
+
+.f-c(){
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+.f-c-sb(){
+		display: flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+html{
+	font-family:sans-serif;
+	background:#f7f7f7;
+	color:#444;
+}
+body{
+	padding:50px 0;
+}
+.header{
+	height:50px;
+	text-align:center;
+	background:#fff;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	z-index: 100;
+	&::before{
+			content: '';
+			display:block;
+			position: absolute;
+			left:-50%;
+			right:-50%;
+			transform: scale(.5);
+			border-bottom:1px solid #ccc;
+			bottom:0;
+		}
+	&-title{
+		text-align:center;
+		font-size:17px;
+		line-height:50px;
+		margin:0 50px;
+	}
+}
+h1,h2,h3{
+	font-size:15px;
+}
+.line{
+	&-b{
+		position:relative;
+		&::before{
+			content: '';
+			display:block;
+			position: absolute;
+			left:-50%;
+			right:-50%;
+			transform: scale(.5);
+			border-bottom:1px solid #ccc;
+			bottom:0;
+		}
+	}
+}
+.tab{
+	.f-c();
+	background:#fff;
+	&>div{
+		padding:10px;
+		font-size:12px;
+		border-bottom: 2px solid transparent;
+		&.active{
+			color:@green;
+			border-bottom-color:@green;
+			font-size:14px;
+		}
+	}
+}
+.home{
+	&-list{
+		&-item{
+			.f-c-sb();
+			background:#fff;
+			margin:0 0;
+			padding:15px;
+			color:#444;
+		}
+		&-cont{
+			.f-c-sb();
+			h2{
+				margin-bottom:10px;
+			}
+			&-img{
+					width:60px;
+				height:60px;
+					margin-right:10px;
+			}
+			img{
+				width:60px;
+				height:60px;
+			}
+			&-line{
+				font-size:12px;
+			}
+		}
+		&>div{
+			
+		}
+		&-tag{
+			font-size:12px;
+			b{
+				font-size:16px;
+				color:@green;
+				margin-right:5px;
+			}
+		}
+	}
+}
+footer{
+	background:#fff;
+	position:fixed;
+z-index: 100;
+	.f-c-sb();
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	height:50px;
+	flex-wrap: wrap;
+	
+	&>div{
+		font-size:11px;
+		color:#777;
+		width:33.333333%;
+		text-align:center;
+		&.active{
+			color:@green;
+		}
+		i{
+			font-size:28px;
+			display:block;
+			line-height:normal;
+			margin-bottom:-3px;
+		}
+	}
+}
